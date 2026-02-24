@@ -1,14 +1,14 @@
 function cornerAdjacentCell = QTree_findCornerAdjacentCell(cornerAdjacentCell,direction,nodeState,QUADRANTS)
-
 % PURPOSE: 
-%  find the IDs of the cell contacting the corners of the currently active cell in Quadtrant
+%   Find the IDs of the corner-adjacent cell in the specified diagonal direction.
 % INPUT: 
-%  cornerAdjacentCell
-%  direction
-%  nodeState
-%  QUADRANTS
+%   cornerAdjacentCell = current (reference) cell ID used as the starting point
+%   direction          = diagonal direction identifier
+%   nodeState          = node state array (empty/internal/leaf-with-box-id)
+%   QUADRANTS          = quadrant definition/lookup table used for traversal
 % OUTPUT: 
-%  cornerAdjacentCell
+%   cornerAdjacentCell = updated list of cell IDs of the corner-adjacent cells 
+%   (or unchanged/invalid if none exists)
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

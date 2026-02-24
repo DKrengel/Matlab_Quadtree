@@ -3,12 +3,12 @@ function edgeAdjacentCells = QTree_findEdgeAdjacentCell(edgeAdjacentCell,directi
 % PURPOSE: 
 %  find the IDs of the cell contacting the edges of the currently active cell in Quadtrant
 % INPUT: 
-%  edgeAdjacentCell (singular)
-%  direction
-%  nodeState
-%  QUADRANTS
+%   edgeAdjacentCell(singular) = ID of the currently active cell (base cell)
+%   direction        = edge direction identifier (e.g., N, S, E, W)
+%   nodeState        = node state array (empty/internal/leaf-with-box-id)
+%   QUADRANTS        = quadrant definition/lookup table used for traversal
 % OUTPUT: 
-%  edgeAdjacentCells (plural!!)
+%   edgeAdjacentCells (plural) = list of IDs of cells contacting the specified edge
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

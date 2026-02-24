@@ -1,14 +1,14 @@
 function [cornerAdjacentCell,hasPolygonInEdge] = QTree_findEdgeCell(cornerAdjacentCell,edgeDirection,nodeState,QUADRANTS)
-
-% PURPOSE: 
-% INPUT: 
-%  cornerAdjacentCell
-%  edgeDirection
-%  nodeState
-%  QUADRANTS
-% OUTPUT: 
-%  cornerAdjacentCell
-%  hasPolygonInEdge
+% PURPOSE
+%   Find the edge-adjacent cell in the specified direction and check whether a polygon exists along that edge.
+% INPUT
+%   cornerAdjacentCell = ID of the current (reference) cell
+%   edgeDirection      = edge direction identifier (e.g., N, S, E, W)
+%   nodeState          = node state array (empty/internal/leaf-with-box-id)
+%   QUADRANTS          = quadrant definition/lookup table used for traversal
+% OUTPUT
+%   cornerAdjacentCell = ID of the edge-adjacent cell in the specified direction
+%   hasPolygonInEdge   = logical flag indicating whether a polygon exists along the specified edge
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

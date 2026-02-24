@@ -1,12 +1,12 @@
 function edgeNeighborCells = QTree_findDeeperEdgeCells(baseEdgeAdjacentCell, edgeDirection, nodeState)
-
-% PURPOSE: 
+% PURPOSE:
+%   Find deeper edge-neighbor cells of a given edge-adjacent cell in the specified direction.
 % INPUT: 
-%  baseEdgeAdjacentCell 
-%  edgeDirection
-%  nodeState
+%   baseEdgeAdjacentCell = ID of the base edge-adjacent cell
+%   edgeDirection        = edge direction identifier (e.g., N, S, E, W)
+%   nodeState            = node state array (empty/internal/leaf-with-box-id)
 % OUTPUT: 
-%  edgeNeighborCells
+%   edgeNeighborCells    = list of IDs of deeper edge-neighbor cells
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

@@ -1,12 +1,13 @@
 function adjacentCells = QTree_findAllAdjacentCells(baseCell,nodeState,QUADRANTS)
 % PURPOSE: 
-%  find the IDs of the 8 cells bordering to the current one
+%  find the IDs of the all cells bordering to the current one in the 8 directions 
+%  (N, S, E, W, NE, NW, SE, SW) 
 % INPUT: 
 %  baseCell  = which cell is currently active as reference point for neighbors
-%  nodeState
-%  QUADRANTS
+%  nodeState = node state array (empty/internal/leaf-with-box-id)
+%  QUADRANTS = quadrant definition/lookup table used for traversal
 % OUTPUT: 
-%  adjacentCells
+%  adjacentCells = list of IDs of adjacent cells (8 directions)
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 
