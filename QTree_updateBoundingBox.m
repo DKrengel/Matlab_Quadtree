@@ -3,6 +3,7 @@ function [boxBottomX, boxTopX, boxBottomY, boxTopY, boxCenterX, boxCenterY] = ..
            boxBottomX, boxTopX, boxBottomY, boxTopY)
 
 % PURPOSE: 
+%  update bounding box based on the current vertex coordinates
 % INPUT: 
 %  polygonVerticesCount = number of vertices per particle
 %  polygonX, polygonY = vertex coordinates

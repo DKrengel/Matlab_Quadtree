@@ -3,18 +3,20 @@ function [boxes1, boxes2, boxesLength] = QTree_searchNeighborBoxes(cell, ...
           cellBottomX, cellBottomY, cellTopX, cellTopY, xBoxMax, yBoxMax)
 
 % PURPOSE: 
-% Search the neighboring 8 cells for particles
-% INPUT: 
-%  cell
-%  nodeState
-%  QUADRANTS
-%  maxPairsCount
-%  cellCenterX, cellCenterY
-%  cellBottomX, cellBottomY, cellTopX, cellTopY
-%  xBoxMax, yBoxMax
-% OUTPUT: 
-%  boxes1, boxes2, 
-%  boxesLength
+%   Search neighboring cells of a given cell and collect neighboring bounding-box pairs.
+% INPUT
+%   cell             = ID of the reference cell
+%   nodeState        = node state array (empty/internal/leaf-with-box-id)
+%   QUADRANTS        = quadrant definition/lookup table used for traversal
+%   maxPairsCount    = maximum number of bounding-box pairs to store
+%   cellCenterX / cellCenterY
+%                    = x / y coordinates of cell centers
+%   cellBottomX / cellBottomY / cellTopX / cellTopY
+%                    = spatial bounds (min x / min y / max x / max y) of each cell
+%   xBoxMax / yBoxMax= maximum bounding-box width / height
+% OUTPUT
+%   boxes1 / boxes2  = indices of neighboring bounding-box pairs
+%   boxesLength      = number of neighboring pairs found
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

@@ -5,7 +5,7 @@ function childNode = QTree_searchChildNode(parentNode,targetQuadrant)
 %  parentNode = ID of parent node
 %  targetQuadrant  = which quadrant to search
 % OUTPUT: 
-%  childNode
+%  childNode = ID of child node
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

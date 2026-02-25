@@ -2,16 +2,19 @@ function isNeighborCell = QTree_isNeighborCell(baseCell, targetCell, ...
            cellCenterX, cellCenterY, cellBottomX, cellBottomY, ...
            cellTopX, cellTopY, xBoxMax, yBoxMax)
 
-% PURPOSE: 
-% INPUT: 
-%  baseCell, 
-%  targetCell
-%  cellCenterX, cellCenterY
-%  cellBottomX, cellBottomY
-%  cellTopX, cellTopY
-%  xBoxMax, yBoxMax
-% OUTPUT: 
-%  isNeighborCell
+% PURPOSE
+%   Check whether a target cell is spatially adjacent to a base cell.
+% INPUT
+%   baseCell    = ID of the reference cell
+%   targetCell  = ID of the candidate neighboring cell
+%   cellCenterX / cellCenterY
+%               = x / y coordinates of cell centers
+%   cellBottomX / cellBottomY / cellTopX / cellTopY
+%               = spatial bounds (min x / min y / max x / max y) of each cell
+%   xBoxMax / yBoxMax
+%               = maximum bounding-box width / height
+% OUTPUT
+%   isNeighborCell = logical value indicating whether the target cell is adjacent to the base cell
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

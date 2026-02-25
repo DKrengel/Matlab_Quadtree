@@ -2,11 +2,23 @@ function [boxes1, boxes2, boxesLength] = QTree_searchNeighborBoxesPairDiffs(cell
     cellCenterX, cellCenterY, cellBottomX, cellBottomY, cellTopX, cellTopY, xBoxMax, yBoxMax, fi_n, la_n)
 
 % PURPOSE: 
-% Neighborhood computation via a quadtree-approach
-% INPUT: 
-% OUTPUT: 
-%  boxes1, boxes2 = 
-%  boxesLength = 
+%   Perform differential neighbor search by recomputing bounding-box pairs 
+%   only for cells affected by partial quadtree modifications.
+% INPUT
+%   cell             = ID of the reference cell
+%   nodeState        = node state array (empty/internal/leaf-with-box-id)
+%   QUADRANTS        = quadrant definition/lookup table used for traversal
+%   maxPairsCount    = maximum number of bounding-box pairs to store
+%   cellCenterX / cellCenterY
+%                    = x / y coordinates of cell centers
+%   cellBottomX / cellBottomY / cellTopX / cellTopY
+%                    = spatial bounds (min x / min y / max x / max y) of each cell
+%   xBoxMax / yBoxMax
+%                    = maximum bounding-box width / height
+%   fi_n / la_n      = first / last node index per depth
+% OUTPUT
+%   boxes1 / boxes2  = indices of neighboring bounding-box pairs
+%   boxesLength      = number of neighboring pairs found
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

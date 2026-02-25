@@ -1,12 +1,12 @@
 function [parentNode, parentQuadrant] = QTree_searchParentNode(childNode,QUADRANTS)
 % PURPOSE: 
-%  Search for the IDs of the parent cell / node per given quadrant
-% INPUT: 
-%  childNode = ID of child node
-%  targetQuadrant  = which quadrant to search
-% OUTPUT: 
-%  parentNode
-%  parentQuadrant
+%   Find the parent node of a given child node and determine its quadrant position.
+% INPUT
+%   childNode   = ID of the child node
+%   QUADRANTS   = quadrant definition/lookup table used for traversal
+% OUTPUT
+%   parentNode      = ID of the parent node
+%   parentQuadrant  = quadrant index of the child node within its parent
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

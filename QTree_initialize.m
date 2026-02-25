@@ -8,10 +8,34 @@ function [...
 % PURPOSE: 
 % Initialize the quadtree at first use
 % INPUT: 
-%  polygonVerticesCount = number of vertices per particle
-%  polygonX, polygonY = vertex coordinates
-%  wallCount = number of walls
+%   polygonVerticesCount = number of vertices per polygon
+%   polygonX             = x-coordinates of polygon vertices
+%   polygonY             = y-coordinates of polygon vertices
+%   wallCount            = number of discretized wall elements
 % OUTPUT: 
+%   boxToNodeMap         = mapping from bounding-box ID to assigned leaf-cell ID
+%   nodeState            = node state array (empty/internal/leaf-with-box-id)
+%   MAX_TREE_DEPTH / MAX_LEAF_NODES / QUADRANTS
+%                        = maximum quadtree depth / maximum leaf-cell ID / quadrant lookup table
+%   cellCenterX / cellCenterY
+%                        = x / y coordinates of all cell centers
+%   cellBottomX / cellBottomY / cellTopX / cellTopY
+%                        = spatial bounds (min x / min y / max x / max y) of each cell
+%   boxesCount           = total number of bounding boxes (polygons + walls)
+%
+%   overlapPairs / overlapPairsCount
+%                        = neighbor bounding-box pair list / number of pairs
+%
+%   boundingBoxPolygonMapping
+%                        = mapping from bounding-box ID to polygon (or wall element) ID
+%   boxBottomX / boxTopX / boxBottomY / boxTopY
+%                        = bounding-box bounds (min x / max x / min y / max y)
+%   boxCenterX / boxCenterY
+%                        = x / y coordinates of each bounding-box center
+%   xBoxMax / yBoxMax    = maximum bounding-box width / height (including walls)
+%   minIndexArrayOfNeighborBoxPairs / maxIndexArrayOfNeighborBoxPairs
+%                        = auxiliary arrays for neighbor-pair bookkeeping (min/max index form)
+%   fi_n / la_n          = first / last node index per depth
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

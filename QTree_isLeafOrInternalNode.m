@@ -3,10 +3,10 @@ function isLeafOrInternal = QTree_isLeafOrInternalNode(i, nodeState)
 % PURPOSE: 
 % Decide whether node i is leaf or internal / branch node
 % INPUT: 
-%  i = 
-%  nodeState
-% OUTPUT: 
-%  isLeafOrInternal
+%   i         = node index to be checked
+%   nodeState = node state array (empty/internal/leaf-with-box-id)
+% OUTPUT
+%   isLeafOrInternal = logical value indicating whether the node is a leaf or internal node
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

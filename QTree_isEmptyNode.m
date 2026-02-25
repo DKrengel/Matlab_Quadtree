@@ -3,10 +3,10 @@ function isEmpty = QTree_isEmptyNode(i, nodeState)
 % PURPOSE: 
 % Decide whether node i is empty
 % INPUT: 
-%  nodeToBottomUp = 
-%  nodeState
+%   i         = node index to be checked
+%   nodeState = node state array (empty/internal/leaf-with-box-id)
 % OUTPUT: 
-%  isLeaf
+%   isEmpty   = logical value indicating whether the node is empty
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 

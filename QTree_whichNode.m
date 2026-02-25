@@ -1,12 +1,13 @@
 function node = QTree_whichNode(nd, x_polygon, y_polygon, cellCenterX, cellCenterY)
 
 % PURPOSE: 
-% INPUT: 
-%  nd = 
-%  x_polygon  y_polygon
-% cellCenterX / cellCenterY
-% OUTPUT: 
-%  node
+%   Determine which child node of a quadtree cell a polygon belongs to.
+% INPUT
+%   nd                         = ID of the current (parent) node
+%   x_polygon /y_polygon       = x / y -coordinate of the polygon
+%   cellCenterX / cellCenterY  = x / y -coordinates of cell centers
+% OUTPUT
+%   node         = ID of the child node to which the polygon belongs
 % CAVEAT: 
 % PERFORMANCE CONSIDERATION: 
 % TODO: 
